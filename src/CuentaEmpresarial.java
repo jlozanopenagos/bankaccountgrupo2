@@ -63,8 +63,4 @@ public class CuentaEmpresarial extends CuentaBancaria {
         return comisionRetiro;
     }
 
-    @Override
-    public void retirar(double monto) {
-
-    }
 }
