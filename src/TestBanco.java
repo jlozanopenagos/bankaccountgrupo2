@@ -9,10 +9,10 @@ public class TestBanco {
         CuentaAhorro cuentaAna = new CuentaAhorro("AH001", "Ana Perez", 50000, 0.025, "2024-01-15");
 
         // Cuenta Corriente: Luis Gomez, CC001, $20,000 (valores por defecto: límite sobregiro $50,000, comisión 5%, tasa 0.0)
-        CuentaCorriente cuentaLuis = new CuentaCorriente("CC001", "Luis Gomez", 20000, 0.0, 50000, 5.0);
+        CuentaCorriente cuentaLuis = new CuentaCorriente("CC001", "Luis Gomez", 20000, 50000, 5.0);
 
         // Cuenta Empresarial: Tech Solutions, EM001, $200,000, RUT 123456789-0 (tasa fija 1.5% = 0.015, comisión retiro $2,000)
-        CuentaEmpresarial cuentaTech = new CuentaEmpresarial("EM001", "Tech Solutions", 200000, 0.015, "Tech Solutions", "123456789-0", 2000);
+        CuentaEmpresarial cuentaTech = new CuentaEmpresarial("EM001", "Tech Solutions", 200000, "Tech Solutions", "123456789-0");
 
         // Cuenta de Ahorro: Maria Lopez, AH002, $15,000, 2024-02-01 (tasa fija 2.5% = 0.025)
         CuentaAhorro cuentaMaria = new CuentaAhorro("AH002", "Maria Lopez", 15000, 0.025, "2024-02-01");
