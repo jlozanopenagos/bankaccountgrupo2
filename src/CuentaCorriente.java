@@ -30,21 +30,16 @@ public class CuentaCorriente extends CuentaBancaria {
             double montoSobregirado = Math.abs(nuevoSaldo);
             double comision = montoSobregirado * (this.porcentajeComisionSobregiro / 100);
             nuevoSaldo -= comision;
-            System.out.printf("Comisión por sobregiro: $%.2f%n", comision);
         }
 
         actualizarSaldo(nuevoSaldo);
-        System.out.printf("Retiro exitoso: $%.2f | Nuevo saldo: $%.2f%n", monto, getSaldo());
     }
 
     @Override
     public void mostrarInfo() {
-        System.out.println("----- INFORMACIÓN DE LA CUENTA -----");
-        System.out.println("Número de Cuenta : " + getNumeroCuenta());
-        System.out.println("Titular          : " + getTitular());
-        System.out.printf("Saldo actual     : $%.2f%n", getSaldo());
-        System.out.printf("Comision Sobregiro  : %.2f%%%n", this.porcentajeComisionSobregiro * 100);
-        System.out.printf("Limite de Sobregito : %.2f%%%n", this.limiteSobregiro);
+        super.mostrarInfo();
+        System.out.printf("Comision Sobregiro  $%.2f: ", this.porcentajeComisionSobregiro * 100);
+        System.out.printf("Limite de Sobregito $%.2f: ", this.limiteSobregiro);
         System.out.println("------------------------------------");
     }
 }
