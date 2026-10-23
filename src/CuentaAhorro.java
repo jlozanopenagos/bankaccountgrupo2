@@ -2,11 +2,15 @@ public class CuentaAhorro extends CuentaBancaria {
 
     private String fechaApertura;
 
-    public CuentaAhorro(String numeroCuenta, String titular, double saldoInicial, String fechaApertura) {
-        super(numeroCuenta, titular, saldoInicial, 0.025);
+    public CuentaAhorro(String numeroCuenta, String titular, double saldoInicial,
+                        double tasaInteres, String fechaApertura) {
+
+        super(numeroCuenta, titular, saldoInicial, tasaInteres);
 
         if (saldoInicial < 10000) {
-            throw new IllegalArgumentException("Por favor intentelo de nuevo, el saldo minimo para abrir la cuenta es $10.000");
+            throw new IllegalArgumentException(
+                    "Por favor recuerde que el saldo minimo para abrir la cuenta es $10000"
+            );
         }
 
         this.fechaApertura = fechaApertura;
